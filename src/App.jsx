@@ -18,13 +18,13 @@ const App = () => {
 
   async function fetchAllTasks() {
     try {
-      const response = await axios.get("http://localhost:8080/api/tasks");
+      const response = await axios.get(`${API_URL}/api/tasks`);
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error);
     }
   }
-
+  
   useEffect(() => {
     fetchAllTasks();
   }, []);
