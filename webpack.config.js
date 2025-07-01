@@ -1,3 +1,4 @@
+const webpack = require("webpack");  
 const path = require("path");
 
 module.exports = {
@@ -29,6 +30,11 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.API_URL": JSON.stringify(process.env.API_URL),
+    }),
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
