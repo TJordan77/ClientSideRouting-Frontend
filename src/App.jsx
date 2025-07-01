@@ -4,6 +4,9 @@ import axios from "axios";
 import "./AppStyles.css";
 import TaskList from "./components/TaskList";
 import AddTask from "./components/AddTask";
+import TaskDetails from "./components/TaskDetails";
+import Users from "./components/Users";
+import SingleUser from "./components/SingleUser"; 
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 
@@ -35,6 +38,9 @@ const App = () => {
             <Route path="/add-task" element={<AddTask fetchAllTasks={fetchAllTasks} />}/>
             <Route path="/complete" element={<TaskList tasks={tasks.filter((task) => task.completed)} fetchAllTasks={fetchAllTasks} />}/>
             <Route path="/incomplete" element={<TaskList tasks={tasks.filter((task) => !task.completed)} fetchAllTasks={fetchAllTasks} />}/>
+            <Route path="/tasks/:id" element={<TaskDetails />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/users/:id" element={<SingleUser />} />
       </Routes>
     </div>
   );
