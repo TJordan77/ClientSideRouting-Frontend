@@ -11,7 +11,7 @@ const AddTask = ({ fetchAllTasks }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/tasks", {
+      await axios.post(`${API_URL}/api/tasks`, {
         title,
         description,
       });
