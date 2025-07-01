@@ -1,6 +1,6 @@
 // All the Single Users! All the Single Users!
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router";
 
 const SingleUser = () => {
   const { id } = useParams();
