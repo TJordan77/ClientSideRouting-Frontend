@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 
+const API_URL = process.env.API_URL || "http://localhost:8080";
+
 const TaskDetails = () => {
   const { id } = useParams();
   const [task, setTask] = useState(null);
