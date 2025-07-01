@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
+const API_URL = process.env.API_URL || "http://localhost:8080";
+
 const Users = () => {
   const [users, setUsers] = useState([]);
   const API_URL = process.env.API_URL || "http://localhost:8080";
