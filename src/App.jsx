@@ -8,6 +8,7 @@ import TaskDetails from "./components/TaskDetails";
 import Users from "./components/Users";
 import SingleUser from "./components/SingleUser"; 
 import NavBar from "./components/NavBar";
+import NotFound from "./components/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/tasks/:id" element={<TaskDetails />} />
             <Route path="/users" element={<Users />} />
             <Route path="/users/:id" element={<SingleUser />} />
+            <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
