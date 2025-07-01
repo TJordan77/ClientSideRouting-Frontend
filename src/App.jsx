@@ -39,7 +39,7 @@ const App = () => {
             Let's fix that! */}
             <Route path="/" element={<TaskList tasks={tasks} fetchAllTasks={fetchAllTasks} />}/>
             <Route path="/add-task" element={<AddTask fetchAllTasks={fetchAllTasks} />}/>
-            <Route path="/complete" element={<TaskList tasks={tasks.filter((task) => task.completed)} fetchAllTasks={fetchAllTasks} />}/>
+            <Route path="/complete" element={<TaskList tasks={Array.isArray(tasks) ? tasks.filter(task => task.completed) : []} fetchAllTasks={fetchAllTasks} />}/>
             <Route path="/incomplete" element={<TaskList tasks={tasks.filter((task) => !task.completed)} fetchAllTasks={fetchAllTasks} />}/>
             <Route path="/tasks/:id" element={<TaskDetails />} />
             <Route path="/users" element={<Users />} />
