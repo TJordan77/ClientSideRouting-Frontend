@@ -11,6 +11,8 @@ import NavBar from "./components/NavBar";
 import NotFound from "./components/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 
+const API_URL = process.env.API_URL || "http://localhost:8080";
+
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
