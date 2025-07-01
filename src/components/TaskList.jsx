@@ -4,7 +4,7 @@ import TaskCard from "./TaskCard";
 const TaskList = ({ tasks, fetchAllTasks }) => {
   return (
     <div>
-      {tasks.length > 0 ? (
+      {Array.isArray(tasks) && tasks.length > 0 ? (
         tasks.map((task) => (
           <TaskCard key={task.id} task={task} fetchAllTasks={fetchAllTasks} />
         ))
