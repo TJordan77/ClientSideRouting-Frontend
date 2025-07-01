@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router";
 import "./TaskCardStyles.css";
 
+const API_URL = process.env.API_URL || "http://localhost:8080";
+
 const TaskCard = ({ task, fetchAllTasks }) => {
   const handleCompleteTask = async () => {
     try {
