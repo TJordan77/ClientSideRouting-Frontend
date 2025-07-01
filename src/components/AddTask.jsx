@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./AddTaskStyles.css";
 
+const API_URL = process.env.API_URL || "http://localhost:8080";
+
 const AddTask = ({ fetchAllTasks }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
